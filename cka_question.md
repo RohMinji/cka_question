@@ -2,8 +2,16 @@
 
 
 <br/>
+## 0. kubernetes 연습환경 만들기(내가 추가한 부분)
+
+<br/>
+docker 설치하기(ubuntu 환경)
+> 컴퓨터 스펙 최소 사양 - CPU : 2core, Memory : 2GB
+> OS : Ubuntu 20.04
 
 ## 1. ETCD Backup & Restore  
+
+https://velog.io/@khyup0629/k8s-kubernetes-%EC%97%B0%EC%8A%B5-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0
 
 <br/>
 
@@ -11,14 +19,14 @@
 > Question : ETCD Backup & Restore  
 
 > TASK :  
->  - First, create a snapshop of the existing etcd instance  running at `https://127.0.0.1:2379`, saving the snapshot to `/data/etcd-snapshot.db`.
+>  - First, create a snapshot of the existing etcd instance  running at `https://127.0.0.1:2379`, saving the snapshot to `/data/etcd-snapshot.db`.
 >  - Next, restore and existing, previous snapshot  located at `/data/etcd-snapshot-previous.db`.  
 
 >  The following TLS certificates/key are supplied for connecting to the server with etcdctl:  
 >  - CA certificate : /etc/kubernetes/pki/etcd/ca.crt     
 >  - Client certificate : /etc/kubernetes/pki/etcd/server.crt     
 >  - Client key : /etc/kubernetes/pki/etcd/server.key       
-
+----------------------------------------------------------------------------------------
 
 <br/>
 
