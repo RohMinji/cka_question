@@ -33,7 +33,8 @@ docker 설치하기(ubuntu 환경)
 >  - Client key : /etc/kubernetes/pki/etcd/server.key       
 ----------------------------------------------------------------------------------------
 내가 작성한 코드: 
-```sudo ETCDCTL_API=3 etcdctl \
+```
+sudo ETCDCTL_API=3 etcdctl \
   --endpoints=https://127.0.0.1:2379 \
   --cacert=/etc/kubernetes/pki/etcd/ca.crt \
   --cert=/etc/kubernetes/pki/etcd/server.crt \
@@ -42,7 +43,8 @@ docker 설치하기(ubuntu 환경)
 ```  
 
 스냅샷 복구 코드:
-```ETCDCTL_API=3 etcdctl snapshot restore --data-dir /data/etcd-snapshot-previous.db snapshot
+```
+ETCDCTL_API=3 etcdctl snapshot restore --data-dir /data/etcd-snapshot-previous.db snapshot
 ```
 
 
