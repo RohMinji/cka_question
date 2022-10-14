@@ -83,6 +83,17 @@ DB=mysql
 
 <br/>
 
+
+답안: <br/>
+```
+kubectl create namespace edu30
+kubectl run eshop-main --image=nginx:1.17 --env=DB=mysql --dry-run=client
+```
+또는
+```
+kubectl run eshop-main --namespace edu30 --image=nginx:1.17 --env=DB=mysql --dry-run=client
+```  
+
 ## 3. Static POD 생성하기
 
 <br/>
