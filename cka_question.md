@@ -32,11 +32,7 @@ docker 설치하기(ubuntu 환경)
 >  - Client certificate : /etc/kubernetes/pki/etcd/server.crt     
 >  - Client key : /etc/kubernetes/pki/etcd/server.key       
 ----------------------------------------------------------------------------------------
-etcd란? <br/>
-key:value 타입의 데이터 저장소, etcd가 다운된다면 Kubernetes 클러스터는 제대로 동작하지 못하므로 높은 신뢰성을 제공해야 함.<br/>
-etcd는 고가용성을 위하여 클러스터로 설치.여러 노드의 통신은 래프트(Raft) 알고리즘에 의해 처리. <br/>
-연결된 노드들 중 리더를 선정하여 클러스터를 관리. 데이터는 분산되어 저장하기 때문에 시스템 오류에 대한 내성을 가지고 있음. <br/>
-클러스터의 노드는 홀수개로 이루어져야 하며, 최소 3개 이상의 노드가 필요.
+참고: [etcd란?](https://www.kangwoo.kr/2020/09/05/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4%EC%9D%98-etcd-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0/)
 
 
 답안: <br/>
