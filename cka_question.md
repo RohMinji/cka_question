@@ -3,7 +3,8 @@
 
 ## 0. kubernetes 연습환경 만들기
 
-[k8s 연습 환경 만들기](https://velog.io/@khyup0629/k8s-kubernetes-%EC%97%B0%EC%8A%B5-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0)
+참고: [k8s 연습 환경 만들기](https://velog.io/@khyup0629/k8s-kubernetes-%EC%97%B0%EC%8A%B5-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0)
+
 
 
 <br/>
