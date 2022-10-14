@@ -8,8 +8,11 @@
 
 
 <br/>
+
+
 docker 설치하기(ubuntu 환경)
-> 컴퓨터 스펙 최소 사양 - CPU : 2core, Memory : 2GB
+> 컴퓨터 스펙 최소 사양 
+> - CPU : 2core, Memory : 2GB
 > OS : Ubuntu 20.04
 
 ## 1. ETCD Backup & Restore  
