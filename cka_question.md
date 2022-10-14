@@ -33,6 +33,7 @@ docker 설치하기(ubuntu 환경)
 >  - Client key : /etc/kubernetes/pki/etcd/server.key       
 ----------------------------------------------------------------------------------------
 내가 작성한 코드: 
+스냅샷 생성
 ```
 sudo ETCDCTL_API=3 etcdctl \
   --endpoints=https://127.0.0.1:2379 \
@@ -42,7 +43,7 @@ sudo ETCDCTL_API=3 etcdctl \
   snapshot save /data/etcd-snapshot.db
 ```  
 
-스냅샷 복구 코드:
+스냅샷 복구
 ```
 ETCDCTL_API=3 etcdctl snapshot restore --data-dir /data/etcd-snapshot-previous.db snapshot
 ```
