@@ -12,8 +12,9 @@
 
 docker 설치하기(ubuntu 환경)
 > 컴퓨터 스펙 최소 사양 
-> - CPU : 2core, Memory : 2GB
-> OS : Ubuntu 20.04
+> - CPU : 2core, 
+> - Memory : 2GB,
+> - OS : Ubuntu 20.04
 
 ## 1. ETCD Backup & Restore  
 
@@ -31,7 +32,17 @@ docker 설치하기(ubuntu 환경)
 >  - Client certificate : /etc/kubernetes/pki/etcd/server.crt     
 >  - Client key : /etc/kubernetes/pki/etcd/server.key       
 ----------------------------------------------------------------------------------------
+내가 작성한 코드: 
+```sudo ETCDCTL_API=3 etcdctl \
+  --endpoints=https://127.0.0.1:2379 \
+  --cacert=/etc/kubernetes/pki/etcd/ca.crt \
+  --cert=/etc/kubernetes/pki/etcd/server.crt \
+  --key=/etc/kubernetes/pki/etcd/server.key \
+  snapshot save /data/etcd-snapshot.db
+```  
 
+```ETCDCTL_API=3 etcdctl snapshot restore --data-dir /data/etcd-snapshot-previous.db snapshot
+```
 <br/>
 
 ## 2. pod 생성하기  
