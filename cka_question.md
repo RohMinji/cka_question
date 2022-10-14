@@ -41,8 +41,11 @@ docker 설치하기(ubuntu 환경)
   snapshot save /data/etcd-snapshot.db
 ```  
 
+스냅샷 복구 코드:
 ```ETCDCTL_API=3 etcdctl snapshot restore --data-dir /data/etcd-snapshot-previous.db snapshot
 ```
+
+
 <br/>
 
 ## 2. pod 생성하기  
