@@ -57,7 +57,7 @@ sudo ETCDCTL_API=3 etcdctl \
 
 <br/>
 
-## 2. pod 생성하기  
+## 2. pod 생성하기 - 너무 쉬워서 나오면 출제되면  받아 먹어야하는 문제
 
 
 <br/>
@@ -94,7 +94,7 @@ kubectl run eshop-main --image=nginx:1.17 --env=DB=mysql --dry-run=client
 kubectl run eshop-main --namespace edu30 --image=nginx:1.17 --env=DB=mysql --dry-run=client
 ```  
 
-## 3. Static POD 생성하기
+## 3. Static POD 생성하기 - 항상 나오는 애
 
 <br/>
 
@@ -122,11 +122,15 @@ Master Node 의 POD 들도 Static POD 이고 kubelet 에 의해서 기동된다.
 
 > 결과값  
 
- ```bash
+ ```
+ bash
  root@newedu:~# kubectl get po -n default
  default                                            web-edu.worker05                                                  1/1     Running                0          2m54s
-```  
 
+```  
+```
+dry run 활용하여 yaml 파일 생성하기
+```
 
 <br/>
 
