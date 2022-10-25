@@ -52,8 +52,16 @@ sudo ETCDCTL_API=3 etcdctl \
   --data-dir /var/lib/etcd-snapshot.db\
   snapshot restore /data/etcd-snapshot-previous.db
 ```
+에러가 난다면 --data-dir 옵션으로 준 디렉토리가 이미 있는 디렉토리 파일이어서 그런 걸 수도 있으니 확인해 볼 것
+그 다음, etcd.yaml 파일을 수정해줘야 하는데, --data-dir 옵션 값을 새 디렉토리 명으로 수정해 주면 됨.
 
+파드를 지우려면 yaml 파일을 다 지워야 함
+에러가 뜨게 되었을 때 
+```
+kubectl get events -n kube-system
+```
 
+이 문제는 꼭 해봐야 한다고 부장님께서 여러 번 강조 하심
 
 <br/>
 
@@ -91,9 +99,14 @@ kubectl run eshop-main --image=nginx:1.17 --env=DB=mysql --dry-run=client
 ```
 또는
 ```
-kubectl run eshop-main --namespace edu30 --image=nginx:1.17 --env=DB=mysql --dry-run=client
+kubectl run eshop-main --image=nginx:1.17 --env=DB=mysql --namespace edu30 --dry-run=client
 ```  
 
+만들어 놓고 잘 됐는지 보고싶으면
+
+```
+watch kubectl 
+```
 ## 3. Static POD 생성하기 - 항상 나오는 애
 
 <br/>
@@ -131,6 +144,11 @@ Master Node 의 POD 들도 Static POD 이고 kubelet 에 의해서 기동된다.
 ```
 dry run 활용하여 yaml 파일 생성하기
 ```
+
+```
+kubectl run web --image=nginx --dry-run=client -o yaml
+```
+
 
 <br/>
 
@@ -197,6 +215,8 @@ Containers:
 
 
 <br/>
+``` 
+kubectl
 
 
 ## 5. Side-car container POD 실행
