@@ -112,7 +112,7 @@ watch kubectl
 apply랑 차이점 : apply는 yaml 따로 생성해서 파드 배포하는 거고
 run은 옵션에서 바로 환경 값 주고 돌릴 수 있음
 
-```
+
 ## 3. Static POD 생성하기 - 항상 나오는 애
 daemon set : 모든 노드가 생성될 때마다 자동으로 갖게 됨
 static pod : 특정 경로에서 자동으로 생성된 pod (그런 경로가 있다고 함 ^^)
@@ -139,7 +139,6 @@ Master Node 의 POD 들도 Static POD 이고 kubelet 에 의해서 기동된다.
 >  - image : nginx
 
 <br/><br/>
-```
 
 > 결과값  
 
