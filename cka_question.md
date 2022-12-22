@@ -149,9 +149,7 @@ Master Node 의 POD 들도 Static POD 이고 kubelet 에 의해서 기동된다.
  default                                            web-edu.worker05                                                  1/1     Running                0          2m54s
 
 ```  
-```
 dry run 활용하여 yaml 파일 생성하기
-```
 
 ```
 kubectl run web --image=nginx --dry-run=client -o yaml
