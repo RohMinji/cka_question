@@ -62,6 +62,8 @@ kubectl get events -n kube-system
 ```
 
 이 문제는 꼭 해봐야 한다고 부장님께서 여러 번 강조 하심
+etcd 가 쿠버네티스의 기반 스토리지, 그래서 모든 데이터가 etcd 에 보관 됨
+스냅샷 생성해서 얘를 통으로 
 
 <br/>
 
@@ -107,7 +109,16 @@ kubectl run eshop-main --image=nginx:1.17 --env=DB=mysql --namespace edu30 --dry
 ```
 watch kubectl 
 ```
+apply랑 차이점 : apply는 yaml 따로 생성해서 파드 배포하는 거고
+run은 옵션에서 바로 환경 값 주고 돌릴 수 있음
+
+```
+
+
+
 ## 3. Static POD 생성하기 - 항상 나오는 애
+daemon set : 모든 노드가 생성될 때마다 자동으로 갖게 됨
+static pod : 특정 경로에서 자동으로 생성된 pod (그런 경로가 있다고 함 ^^)
 
 <br/>
 
@@ -148,7 +159,7 @@ dry run 활용하여 yaml 파일 생성하기
 ```
 kubectl run web --image=nginx --dry-run=client -o yaml
 ```
-
+dry-run : pod 생성은 안 되는 대신 다른 옵션 줘서 뭔가를 만들어 낼 수 있게 함.
 
 <br/>
 
