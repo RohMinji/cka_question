@@ -221,7 +221,7 @@ Containers:
 
 <br/>
 ``` 
-kubectl
+
 
 
 ## 5. Side-car container POD 실행
@@ -330,6 +330,11 @@ root@newedu:~# kubectl get deployment
 NAME               READY   UP-TO-DATE   AVAILABLE   AGE
 eshop-order        1/1     1            1           7s
 ```  
+
+> 입력 코드
+```bash
+kubectl scale deployment eshop-order --replicas=5
+```
 
 > 결과값  : pod가 5개가 생성되었는지 확인한다.
 
